@@ -37,6 +37,19 @@ bot.onText(/\/himarsiki/, async (msg, _) => {
     bot.sendMessage(chatId, himarsikiOptions[Math.floor(Math.random() * himarsikiOptions.length)]);
 });
 
+bot.onText(/\/help/, async (msg, _) => {
+    const chatId = msg.chat.id;
+
+    bot.sendMessage(chatId, 
+        `Вечер в хату, с вами Кибер Тетюев, коллективный разум и эксперт по всем вопросам.
+        
+        /gaziki@cybertetyuev_bot покажет почем нынче газики
+        /himarsiki@cybertetyuev_bot тщательно проанализирует ситуацию и ответит HIMARS это был или нет (не хуже любого военкора)
+        `, {
+        
+    });
+});
+
 
 http.createServer(function (_, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
