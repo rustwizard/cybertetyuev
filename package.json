@@ -1,0 +1,16 @@
+{
+  "name": "cybertetyuev",
+  "version": "1.0.0",
+  "description": "Telegram bot to know what happened with Natural Gas Prices in Germany",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.58.0",
+    "request-promise": "^4.2.6"
+  }
+}
