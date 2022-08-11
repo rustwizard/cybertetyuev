@@ -50,6 +50,20 @@ bot.onText(/\/help/, async (msg, _) => {
     });
 });
 
+const uazikiOptions = [
+    'Петух без УАЗа!',
+    'Двигатель с западными свистелками и перделками на УАЗ последнего рестайла уже 300 тыщ стоит!',
+    'Звучит даже хуже шумоизоляции от УАЗа',
+    'Раньше хотел купить УАЗ Хантер. Я думал, нормальный пацан, хотел его в Монино свозить.',
+    'Маркетологи УАЗа знают толк. УАЗ не гниет и не ржавеет!'
+];
+
+bot.onText(/\/uaziki/, async (msg, _) => {
+    const chatId = msg.chat.id;
+
+    bot.sendMessage(chatId, uazikiOptions[Math.floor(Math.random() * uazikiOptions.length)]);
+});
+
 
 http.createServer(function (_, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
